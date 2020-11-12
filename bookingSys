@@ -1,0 +1,132 @@
+import java.util.Scanner;
+import java.util.ListIterator;
+import java.util.Random; 
+
+
+
+
+
+
+
+public class exercises {
+	
+	public static void compare(String tableEnt, String tables [][])
+    {
+        for(int k=0; k<tables.length; k++)
+        {
+            if(tableEnt.equals(tables[k]))
+                System.out.println("The number has been entered before.");
+        }
+    }
+	
+	
+	// multidimensional array to display all table numbers. 
+	static String tables [][] = {	
+			{" [01] " , " [02] " , " [03] " , " [04]  " , " [05] " , " [06] " , " [07]  "},
+			{" [08] " , " [09] " , " [10] " , " [11]  " , " [12] " , " [13] " , " [14]  " + " \n "},
+
+			{" [15] " , " [16] " , " [17] " , " [18]  " , " [19] " , " [20] " , " [21]  "},
+			{" [22] " , " [23] " , " [24] " , " [25]  " , " [26] " , " [27] " , " [28]  " + " \n "},
+
+			{" [29] " , " [30] " , " [31] " , " [32]  " , " [33] " , " [34] " , " [35]  "},
+			{" [36] " , " [37] " , " [38] " , " [39]  " , " [40] " , " [41] " , " [42]  "}};
+	
+	
+	// A method for displaying all tables
+			public static void displayTable() {
+					
+					for(int i =0; i<6; i++) {
+						for(int j=0; j<7; j++) {
+							System.out.print(tables[i][j]);
+						}
+						System.out.println();	
+					}
+			} 
+	
+	 
+
+		
+		public static void main(String[] args) {
+			//Variable declarations: 
+			
+			boolean found = false;
+			
+			
+			
+			int min = 1;
+		    int max = 42;
+		 
+			
+			String name;
+			int newTable = 1;
+			//int tableID;
+			
+		// boolean answer;
+			
+			//Welcome message to the customer
+			System.out.println("Welcome to the booking system > ");
+			System.out.println();
+			
+			System.out.println("Please enter your full-name> ");
+			Scanner input1 = new Scanner(System.in);
+			Scanner input2 = new Scanner(System.in);
+			
+			name = input1.next();
+		
+			
+				while (true) {
+				
+				displayTable();
+				System.out.println();
+			
+			System.out.println("Thank you, " + name );	
+			
+			
+			
+	            
+	        
+			
+				
+			for (int k = 0; k < tables.length; k++) {
+				
+				System.out.println("Enter a table number");
+				int tableID = input2.nextInt();
+				String tableString = Integer.toString(tableID);
+				
+				
+				if(tableString.equals(tables[k])) {
+	                System.out.println("This table is booked.");
+				}
+				
+				else { System.out.println("Your allocated table is: ");
+			      int random_int = (int)(Math.random() * (max - min + 1) + min);
+			      System.out.println(random_int);
+					
+				
+				
+			    }
+				
+			}
+			
+				
+			
+			
+			
+			
+				}	
+				
+				
+			 
+			
+			
+
+
+ 
+	 
+	 
+      }
+	     
+}
+		
+
+  
